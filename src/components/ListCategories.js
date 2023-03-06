@@ -45,10 +45,10 @@ export default class ListCategories extends Component {
     const { changeCategory, categorySelected } = this.props;
 
     return (
-      <Col md={2} mt="2">
-        <h4>
+      <Col md={2} className="mt-2 mb-3">
+        <h5>
           <strong>Daftar Kategori</strong>
-        </h4>
+        </h5>
         <hr />
 
         <ListGroup>
@@ -57,8 +57,10 @@ export default class ListCategories extends Component {
               <ListGroup.Item
                 key={category.id}
                 onClick={() => changeCategory(category.nama)}
-                className={categorySelected === category.nama && "category-aktif"}
-                style={{cursor: 'pointer'}}
+                className={
+                  categorySelected === category.nama && "category-aktif"
+                }
+                style={{ cursor: "pointer" }}
               >
                 <h5>
                   <Icon nama={category.nama} /> {category.nama}
